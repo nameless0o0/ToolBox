@@ -183,9 +183,8 @@ html, body {
 ::-webkit-scrollbar {
     display: none;
 }
+
 /* Карточки */
-
-
 
 /* Контейнер для карточек */
 .card-container {
@@ -230,4 +229,85 @@ html, body {
 .card:hover {
     transform: scale(1.05); /* Лёгкое увеличение */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Более сильная тень */
+}
+
+/* Медиазапросы для адаптивности */
+
+/* Для экранов мобильных устройств */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        left: 0;
+    }
+
+    .menu-btn {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .card-container {
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+
+    .card {
+        width: 90%; /* Адаптируем карточки под мобильные устройства */
+        height: 350px; /* Немного уменьшаем высоту карточки */
+        font-size: 25px;
+    }
+}
+
+/* Для экранов планшетов */
+@media (max-width: 1024px) {
+    .menu-btn {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    .hero h1 {
+        font-size: 2.3em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .card-container {
+        column-gap: 60px;
+        row-gap: 30px;
+    }
+
+    .card {
+        width: 250px;
+        height: 380px;
+        font-size: 30px;
+    }
+}
+
+/* Для больших экранов */
+@media (min-width: 1200px) {
+    .card-container {
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+
+    .card {
+        width: 350px;
+        height: 450px;
+        font-size: 40px;
+    }
 }
