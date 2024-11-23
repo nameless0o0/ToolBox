@@ -145,7 +145,8 @@ body.dark-mode {
     position: fixed;
     top: 10px;
     right: 10px;
-    padding: 10px;
+    padding: 15px;
+    transform: scale(2);
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -198,40 +199,39 @@ html, body {
 
 /* Карточка */
 .card {
-    width: 300px; /* Фиксированная ширина */
-    height: 400px; /* Фиксированная высота */
-    border-radius: 15px; /* Закруглённые углы */
-    overflow: hidden; /* Обрезка содержимого за пределами */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
-    transition: transform 0.3s ease, max-width 0.3s ease; /* Плавные изменения */
-    text-align: center;
-    background: rgba(0, 137, 0, 0.45);
-    font-size: 35px;
+    background: linear-gradient(145deg, #f3f3f3, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует содержимое по горизонтали */
+    height: 300px; /* Задаем фиксированную высоту для карточки */
 }
 
-/* Картинка */
 .card img {
-    width: 100%; /* Масштабирование по ширине */
-    height: 80%; /* 70% высоты карточки */
-    object-fit: cover; /* Масштабирование без искажения */
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: auto;
 }
-/* Текст */
+
 .card p {
-    font-size: 0.8em;
-    color: rgba(255, 255, 255, 0.7);
-    height: 30%; /* Оставляем 30% высоты для текста */
-    overflow: hidden; /* Убираем лишний текст */
-    text-overflow: ellipsis; /* Добавляем троеточие для длинного текста */
-    white-space: nowrap; /* Текст в одну строку */
+    position: absolute; 
+    bottom: 40px;
+    text-align: center; /* Центрирует текст по горизонтали */
+    font-size: 2rem; /* Размер текста */
 }
 
-/* Эффект при наведении */
 .card:hover {
-    transform: scale(1.05); /* Лёгкое увеличение */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Более сильная тень */
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.7), 0 0 60px rgba(0, 128, 255, 0.5);
 }
-
-/* Медиазапросы для адаптивности */
 
 /* Для экранов мобильных устройств */
 @media (max-width: 768px) {
@@ -312,9 +312,21 @@ html, body {
     }
 }
 
-.welcome{
-    display: grid;
-    font-size: 40px;
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 37vh;
+    height: 90vh; /* Занимает всю высоту экрана */
+    padding: 20px; /* Отступы для лучшего отображения на маленьких экранах */
+    color: #333; /* Цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт */
+
+}
+.welcome h1{
+    font-size: 45px;
+}
+.welcome p{
+    font-size: 25px;
 }

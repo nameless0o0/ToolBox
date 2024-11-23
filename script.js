@@ -29,16 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
     const titles = document.querySelectorAll(".title"); // Все элементы с классом title
-    const ps = document.querySelectorAll(".card-paragraph");
 
     // Проверяем состояние темы из localStorage
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark-mode");
         themeIcon.textContent = "☀️";
-
-        ps.forEach(p => {
-            p.style.color = "white";
-        });
         // Меняем цвет всех элементов с классом title на белый
         titles.forEach(title => {
             title.style.color = "white";
