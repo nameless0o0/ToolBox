@@ -215,6 +215,8 @@ html, body {
 }
 
 .card img {
+    position: absolute;
+    top: 0;
     max-width: 100%;
     border-radius: 10px;
     object-fit: cover;
@@ -223,11 +225,66 @@ html, body {
 
 .card p {
     position: absolute; 
-    bottom: 40px;
+    bottom: 10px;
     text-align: center; /* Центрирует текст по горизонтали */
     font-size: 2rem; /* Размер текста */
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 30px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 30px rgba(0, 128, 255, 0.7), 0 0 60px rgba(0, 128, 255, 0.5);

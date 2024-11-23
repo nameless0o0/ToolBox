@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Донат</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="themeToggle" class="dark-mode-toggle">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+
+    <div id="sidebar" class="sidebar">
+        <div class="logo">
+          <h2 onclick="window.location.href='./index.html'">Toolbox</h2>
+        </div>
+        <div class="menu">
+          <button class="menu-btn" onclick="window.location.href='./games.html'">
+            Игры</button>
+          </button>
+          <button class="menu-btn" onclick="window.location.href='./drivers.html'">
+            Драйвера для Windows
+          </button>
+          <button class="menu-btn" onclick="window.location.href='./roms.html'">
+            Прошивки
+          </button>
+          <button class="menu-btn" onclick="window.location.href='./tools.html'">
+            Полезные инструменты
+          </button>
+          <button class="menu-btn" onclick="window.location.href='./donate.html'">
+            Донат
+          </button>
+        </div>
+      </div>
+
+    <div class="container">
+        <header>
+            <h1>Поддержите наш проект!</h1>
+        </header>
+
+        <main>
+            <p style="color: black;">Ваши донаты помогают нам развивать проект. Спасибо за вашу поддержку!</p>
+
+            <!-- Форма для ввода данных карты -->
+            <form action="/process_payment" method="POST">
+                <input type="text" name="name" placeholder="Имя на карте" required>
+                <input type="number" name="card_number" placeholder="Номер карты" required>
+                <input type="number" name="expiry_date" placeholder="Срок действия (мм/гг)" required>
+                <input type="number" name="cvv" placeholder="CVV" required>
+                <input type="submit" value="Донатить">
+            </form>
+        </main>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Toolbox By Razzaqov Murodbek. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
