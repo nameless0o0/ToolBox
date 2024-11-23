@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Общие стили */
 * {
     margin: 0;
@@ -228,6 +229,8 @@ html, body {
     bottom: 10px;
     text-align: center; /* Центрирует текст по горизонтали */
     font-size: 2rem; /* Размер текста */
+    font-style: Montserrat;
+    font-weight: 500;
 }
 body {
     font-family: Arial, sans-serif;
